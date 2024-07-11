@@ -1,19 +1,11 @@
 id,nombre,apellido,genero,edad,fecha_nacimiento,fecha_muerte,estado,hijo_de
-25338156,Carla,Mavarez,Femenino,29,19/11/1995,,Soltera,15332651
 25228625,Marco,Mavarez,Masculino,30,18/07/1994,,Soltero,15332651
-24223456,Alexander,Mavarez,Masculino,31,17/10/1993,,Soltero,15332651
 15332651,Alfonso,Mavarez,Masculino,49,20/07/1975,,Casado,10553468
-14665894,Rick,Mavarez,Masculino,50,12/12/1974,,Soltero,10553468
 15332684,Marta,Perez,Femenino,50,20/01/1974,,Soltera,10566489
-15442651,Rosa,Perez,Femenino,48,21/04/1976,,Casada,10566489
 10556489,Manuel,Perez,Masculino,69,15/05/1955,,Casado,10235978
 10485697,Olivia,Gonzales,Femenino,69,15/06/1955,,Casado,1052689
 10553468,Arsenio,Mavarez,Masculino,74,20/02/1950,02/05/1990,Casado,8754235
 11324658,Rocio,Pereira,Femenino,73,21/01/1951,,Casado,8554326
-11000234,Arantza,Mavarez,Femenino,72,20/01/1952,01/01/1991,Soltera,8754235
-10201221,Kevin,Mavarez,Masculino,73,12/06/1951,,Casado,8754235
-12131456, Malcon,Pereira,Masculino,69,26/07/1955,,Casado,8554326
-11623589,Rosario,Pereira,Femenino,70,28/03/1954,,Casado,8554326
 8554326,Alan,Pereira,Masculino,93,28/03/1931,15/10/1990,Casado,1233652
 8544123,Maria,Acosta,Femenino,94,12/06/1930,19/09/98,Casado,1326542
 8754235,Adan,Mavarez,Masculino,94,25/05/1930,05/05/2005,Casado,2236443
