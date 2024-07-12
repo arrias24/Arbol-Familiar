@@ -13,7 +13,8 @@ struct Persona
     string fecha_nacimiento;
     string fecha_muerte;
     string estado;
-    int hijo_de;
+    int hijo_de [2];
+    int numero_de_hermanos;
 };
 
 #endif
