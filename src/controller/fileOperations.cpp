@@ -12,7 +12,7 @@ void openFile(ifstream& file, string directory)
     if(!file.is_open()){cout<<"[ERROR] - La ruta del archivo es incorrecta."<<endl; exit(1);}
 }
 
-void saveData(ifstream& file, Persona persona[], int& num_person)
+void saveData(ifstream &file, Persona persona[], int &num_person)
 {
     num_person = 0;
     string line;
@@ -37,7 +37,11 @@ void saveData(ifstream& file, Persona persona[], int& num_person)
         getline(stream,data,',');
         persona[num_person].estado = data;
         getline(stream,data,',');
-        persona[num_person].hijo_de = std::stoi(data);
+        persona[num_person].hijo_de[0] = std::stoi(data);
+        getline(stream,data,',');
+        persona[num_person].hijo_de[1] = std::stoi(data);
+        getline(stream,data,',');
+        persona[num_person].numero_de_hermanos = std::stoi(data);
         num_person++;
     }
     file.close();

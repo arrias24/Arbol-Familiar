@@ -5,15 +5,14 @@ template<class T>
 class Node{
     private:
         T data;
-        Node<T> *left=NULL;
-        Node<T> *right=NULL;
+        Node<T> *next=NULL;
     public:
-        Node(T,Node<T>*,Node<T>*);
+        Node(T,Node<T>*);
         ~Node();
-        Node<T>* getChildren(int);
+        Node<T>* getNextNode();
         void setData(T);
         T getData();
-        void setChildren(Node<T>*,Node<T>*);
+        void setNextNode(Node<T>*);
         void print();
 };
 

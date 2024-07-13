@@ -1,5 +1,5 @@
 #include "./tree.h"
-#include "../node/node.cpp"
+#include "../nodeTree/nodeTree.cpp"
 template<class T>
  bool Tree<T>::isEmpty(){
     return root==NULL;
@@ -9,19 +9,19 @@ void Tree<T>::insert( T data){
     root=insert(root,data);
 };
 template<class T>
-Node<T>* Tree<T>::insert(Node<T> * node, T data){
+NodeTree<T>* Tree<T>::insert(NodeTree<T> * node, T data){
     if(node==NULL)
     {
-        return new Node<T>(data,NULL,NULL);
+        return new NodeTree<T>(data,NULL,NULL);
     }
     else if(node->getData().edad > data.edad)
     {
-        Node<T>* izq=insert(node->getChildren(0),data);
+        NodeTree<T>* izq=insert(node->getChildren(0),data);
         node->setChildren(izq,NULL);
     }
     else if(node->getData().edad < data.edad)
     {
-         Node<T>* der=insert(node->getChildren(1),data);
+         NodeTree<T>* der=insert(node->getChildren(1),data);
         node->setChildren(NULL,der);
     }
     return node;
@@ -42,7 +42,7 @@ void Tree<T>::print(int orden){
     }
 };
 template<class T>
-void Tree<T>::postOrden(Node<T> *node){
+void Tree<T>::postOrden(NodeTree<T> *node){
     if(node==NULL) return;
    
     postOrden(node->getChildren(0));
@@ -50,7 +50,7 @@ void Tree<T>::postOrden(Node<T> *node){
     node->print();
 }
 template<class T>
-void Tree<T>::inOrden(Node<T> *node){
+void Tree<T>::inOrden(NodeTree<T> *node){
     if(node==NULL) return;
     inOrden(node->getChildren(0));
     node->print();
@@ -58,7 +58,7 @@ void Tree<T>::inOrden(Node<T> *node){
     
 }
 template<class T>
-void Tree<T>::preOrden(Node<T> *node){
+void Tree<T>::preOrden(NodeTree<T> *node){
     if(node==NULL) return;
     node->print();
     preOrden(node->getChildren(0));

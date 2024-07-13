@@ -1,15 +1,15 @@
-#include "../node/node.h"
+#include "../nodeTree/nodeTree.h"
 template<class T>
 class Tree{
     private:
-        Node<T>* root=NULL;
+        NodeTree<T>* root=NULL;
         int higth = 0;
-        Node<T>* insert(Node<T>*, T);
+        NodeTree<T>* insert(NodeTree<T>*, T);
     public:
         bool isEmpty();
         void insert(T);
         void print(int);
-        void postOrden(Node<T>*);
-        void inOrden(Node<T>*);
-        void preOrden(Node<T>*);
+        void postOrden(NodeTree<T>*);
+        void inOrden(NodeTree<T>*);
+        void preOrden(NodeTree<T>*);
 };

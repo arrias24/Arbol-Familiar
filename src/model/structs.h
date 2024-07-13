@@ -2,6 +2,7 @@
 #define STRUCTS_H
 
 #include <iostream>
+#include "../class/list/list.h"
 using namespace std;
 struct Persona
 {
@@ -15,6 +16,7 @@ struct Persona
     string estado;
     int hijo_de [2];
     int numero_de_hermanos;
+    List<Persona> hermanos;
 };
 
 #endif
