@@ -1,4 +1,7 @@
-#include "../nodeTree/nodeTree.h"
+#ifndef TREE_H
+#define TREE_H
+
+#include "../node/nodeTree.h"
 template<class T>
 class Tree{
     private:
@@ -13,3 +16,5 @@ class Tree{
         void inOrden(NodeTree<T>*);
         void preOrden(NodeTree<T>*);
 };
+
+#endif

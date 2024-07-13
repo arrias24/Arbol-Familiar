@@ -1,5 +1,5 @@
 #include "./tree.h"
-#include "../nodeTree/nodeTree.cpp"
+#include "../node/nodeTree.cpp"
 template<class T>
  bool Tree<T>::isEmpty(){
     return root==NULL;
