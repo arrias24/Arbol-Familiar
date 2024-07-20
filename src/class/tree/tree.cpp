@@ -1,5 +1,5 @@
 #include "./tree.h"
-#include "../nodeTree/nodeTree.cpp"
+#include "../node/nodeTree.cpp"
 template<class T>
  bool Tree<T>::isEmpty(){
     return root==NULL;
@@ -64,3 +64,47 @@ void Tree<T>::preOrden(NodeTree<T> *node){
     preOrden(node->getChildren(0));
     preOrden(node->getChildren(1));
 }
+
+template <class T>
+void Tree<T>::insertData(T data) 
+{
+    NodeTree<T>* node = new NodeTree<T>(data, NULL, NULL);
+
+    if (root == NULL) {
+        root = node;
+    } else {
+        NodeTree<T>* current = root;
+
+        while (current != NULL) {
+
+            if (data.hijo_de[0] == current->getData().id) {
+                // El padre es el hijo izquierdo
+                if (current->getChildren(0) == NULL) {
+                    current->setChildren(node, NULL);
+                } else {
+                    current = current->getChildren(0);
+                }
+            } else if (data.hijo_de[1] == current->getData().id) {
+                // La madre es el hijo derecho
+                if (current->getChildren(1) == NULL) {
+                    current->setChildren(NULL, node);
+                } else {
+                    current = current->getChildren(1);
+                }
+            } else {
+                // Buscar el padre o madre en el árbol
+                if (current->getChildren(0) != NULL) {
+                    current = current->getChildren(0);
+                } else if (current->getChildren(1) != NULL) {
+                    current = current->getChildren(1);
+                } else {
+                    // No se encontró el padre o madre, agregar como hijo izquierdo
+                    current->setChildren(node, NULL);
+                    break;
+                }
+            }
+        }
+    }
+}
+
+

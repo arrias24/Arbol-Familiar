@@ -7,6 +7,7 @@ class NodeTree{
         T data;
         NodeTree<T> *left=NULL;
         NodeTree<T> *right=NULL;
+        NodeTree<T>* parent;
     public:
         NodeTree(T,NodeTree<T>*,NodeTree<T>*);
         ~NodeTree();

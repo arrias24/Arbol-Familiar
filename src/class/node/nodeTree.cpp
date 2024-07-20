@@ -55,13 +55,16 @@ void NodeTree<T>::print(){
     cout<<"Edad: "<<this->data.edad<<"."<<endl;
     cout<<"Fecha de nacimiento: "<<this->data.fecha_nacimiento<<"."<<endl;
     cout<<"Fecha de muerte: "<<this->data.fecha_muerte<<"."<<endl;
-    cout<<"Hijo de: "<<this->data.hijo_de<<"."<<endl<<endl;
+    cout<<"Padre: "<<this->data.hijo_de[0]<<"."<<endl;
+    cout<<"Madre: "<<this->data.hijo_de[1]<<"."<<endl;
+    cout<<"Cantidad de hermanos: "<<this->data.numero_de_hermanos<<"."<<endl<<endl;
 }
 template <class T>
 NodeTree<T>::~NodeTree(){
     this->right=NULL;
     this->left=NULL;
 }
+
 
 
 
