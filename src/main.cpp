@@ -5,8 +5,6 @@
 #include "../src/controller/fileOperations.cpp"
 #include "../src/class/queve/queve.cpp"
 #include "../src/class/tree/tree.cpp"
-
-
 using namespace std;
 
 int main()
@@ -28,17 +26,17 @@ int main()
     saveDataBrother(file_brothers,brother, num_person_brother);
     insertBrothers(persona_tree,brother,num_person_tree,num_person_brother);
 
-    //CREAMOS ARBOL Y AGREGAMOS SUS DATOS
+    //CREAMOS ARBOL E INSERTAMOS LOS DATOS
 
     Tree <Persona> tree;
-
-    for(int i = 0; i < num_person_tree; i++)
+    
+    for (int i = 0; i < num_person_tree; i++)
     {
         tree.insertData(persona_tree[i]);
     }
 
-    tree.print(2);
+    //tree.printFemale();
+    //tree.printMales();
 
-    
     return 0;
 }

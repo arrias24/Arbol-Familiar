@@ -108,3 +108,43 @@ void Tree<T>::insertData(T data)
 }
 
 
+template<class T>
+void Tree<T>::printMales() {
+    printMalesHelper(root);
+}
+
+template<class T>
+void Tree<T>::printMalesHelper(NodeTree<T>* node) {
+    if (node == NULL) return;
+
+    // Imprimir el nodo si el género es masculino
+    if (node->getData().genero == "Masculino") {
+        node->print();  // Puedes ajustar esto si quieres un formato diferente
+    }
+
+    // Recorrer los hijos
+    printMalesHelper(node->getChildren(0));
+    printMalesHelper(node->getChildren(1));
+}
+
+
+template<class T>
+void Tree<T>::printFemale() {
+    printFemaleHelper(root);
+}
+
+template<class T>
+void Tree<T>::printFemaleHelper(NodeTree<T>* node) {
+    if (node == NULL) return;
+
+    // Imprimir el nodo si el género es masculino
+    if (node->getData().genero == "Femenino") {
+        node->print();  // Puedes ajustar esto si quieres un formato diferente
+    }
+
+    // Recorrer los hijos
+    printFemaleHelper(node->getChildren(0));
+    printFemaleHelper(node->getChildren(1));
+}
+
+

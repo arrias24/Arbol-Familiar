@@ -16,6 +16,11 @@ class Tree{
         void postOrden(NodeTree<T>*);
         void inOrden(NodeTree<T>*);
         void preOrden(NodeTree<T>*);
+
+        void printMalesHelper(NodeTree<T>* node);
+        void printMales();
+        void printFemale();
+        void printFemaleHelper(NodeTree<T>* node);
 };
 
 #endif
